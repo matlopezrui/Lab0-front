@@ -1,0 +1,22 @@
+.Method-selection {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Method-button {
+    background-color: #1662b8;
+    height: 80px;
+    width: 150px;
+    border-radius: 20px;
+}
+
+h3 {
+    padding-top: 25px;
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.Method-button:hover {
+    background-color: rgb(45, 57, 124);
+    cursor: pointer;
+}

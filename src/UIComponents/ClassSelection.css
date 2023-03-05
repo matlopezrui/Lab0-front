@@ -1,0 +1,47 @@
+.Class-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 15%;
+}
+
+.Class-button {
+    background-color: #1662b8;
+    height: 20vh;
+    width: 18vw;
+    border-radius: 20px;
+    margin-left: 15vw;
+    margin-top: 5vh;
+}
+
+.homePersonIcon {
+    position: absolute;
+    margin: 9.2vh 0 0 5.4vw;
+    height: 80px;
+    width: auto;
+}
+
+.homeHouseIcon {
+    position: absolute;
+    margin: 9.2vh 0 0 5.2vw;
+    height: 80px;
+    width: auto;
+}
+
+.homeMapIcon {
+    position: absolute;
+    margin: 9.2vh 0 0 5.2vw;
+    height: 80px;
+    width: auto;
+}
+
+.Class-button:hover {
+    background-color: rgb(45, 57, 124);
+    cursor: pointer;
+}
+
+h4 {
+    color: white !important;
+    text-decoration: none !important;
+    padding-top: 16vh !important;
+}
