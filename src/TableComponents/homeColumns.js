@@ -1,7 +1,7 @@
 export const HOMECOLUMNS = [
     {
         Header: "Id",
-        accessor: "id"
+        accessor: "id_vivienda"
     },
     {
         Header: "Direccion",

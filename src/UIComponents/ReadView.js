@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import { useTable, usePagination } from 'react-table';
-import MOCK_DATA from '../TableComponents/MOCK_DATA.json';
 import { COLUMNS }  from '../TableComponents/columns.js';
-import MOCK_DATA_HOMES from '../TableComponents/MOCK_DATA_HOMES.json';
-import { HOMECOLUMNS }  from '../TableComponents/homeColumns.js';
+import { HOMECOLUMNS } from '../TableComponents/homeColumns.js';
+import { MUNICOLUMNS } from '../TableComponents/muniColumns.js';
 import { getAllPersonas } from '../services/PersonaServices';
+import { getAllHouses } from '../services/ViviendaServices';
+import { getAllMuni } from '../services/MuniServices';
 import './ReadView.css'
 
 function ReadView({classType}) {
-    const [ personas, setPersonas ] = useState([]);
+    const [personas, setPersonas] = useState([]);
+    const [viviendas, setViviendas] = useState([]);
+    const [municipios, setMunicipios] = useState([]);
     let headers;
     let rowData;
 
@@ -17,11 +20,11 @@ function ReadView({classType}) {
         rowData = personas;
     } else if (classType === "vivienda") {
         headers = HOMECOLUMNS;
-        rowData = MOCK_DATA_HOMES;
+        rowData = viviendas;
     } else {
-        
+        headers = MUNICOLUMNS;
+        rowData = municipios;
     }
-
     const tableInstance = useTable(
         {
             columns: headers,
@@ -45,9 +48,12 @@ function ReadView({classType}) {
     } = tableInstance;
     
     const { pageIndex } = state;
+
     
     useEffect(() => {
+        getAllHouses().then((viviendasData) => setViviendas(viviendasData))
         getAllPersonas().then((personasData) => setPersonas(personasData))
+        getAllMuni().then((municipiosData) => setMunicipios(municipiosData))
      }, []);
 
     if (!personas) return <div>Cargando...</div>

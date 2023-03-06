@@ -1,6 +1,6 @@
-export async function getAllPersonas() {
+export async function getAllMuni() {
     try {
-        const response = await fetch('http://localhost:8000/personas/');
+        const response = await fetch('http://localhost:8000/municipios/');
         const jsonData = await response.json();
         console.log(jsonData)
         return jsonData;

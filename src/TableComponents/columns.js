@@ -1,7 +1,7 @@
 export const COLUMNS = [
     {
         Header: "Id",
-        accessor: "id"
+        accessor: "id_persona"
     },
     {
         Header: "Nombre",
@@ -12,16 +12,16 @@ export const COLUMNS = [
         accessor: "sexo"
     },
     {
-        Header: "Id Residencia",
-        accessor: "ip_residencia"
+        Header: "ID Residencia",
+        accessor: "residencia"
     },
     {
-        Header: "Id Municipio",
-        accessor: "id_municipio"
+        Header: "ID Municipio",
+        accessor: "municipio"
     },
     {
-        Header: "Id Cabeza de Familia",
-        accessor: "cabezaDeFamilia"
+        Header: "ID Cabeza de Familia",
+        accessor: "cabeza_familia"
     },
     {
         Header: "Telefono",
@@ -29,6 +29,6 @@ export const COLUMNS = [
     },
     {
         Header: "Fecha de Nacimiento",
-        accessor: "fechaDeNacimiento"
+        accessor: "fecha_nacimiento"
     }
 ]
